@@ -138,6 +138,7 @@ gf_fzf_one() {
             $(quote_params "$@")"
   fi
   eval "fzf +m --ansi --no-sort --no-info \
+          --bind "ctrl-j:down,ctrl-k:up,ctrl-h:preview-down,ctrl-l:preview-up" \
           $(preview_window_settings) \
           $(quote_params "$@")"
 }
